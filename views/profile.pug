@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+  .container
+    h2.bg-info Profile page
+
+    .form-floating.mb-3
+      input#floatingInput.form-control(type='email' placeholder='name@example.com' name='email' value=email)
+      label(for='floatingInput') Email address
+    .form-floatingid
+      input#floatingPassword.form-control(type='password' placeholder='Password' name='password' value=password)
+      label(for='floatingPassword') Password
+    .form-floating
+      input#floatingName.form-control(type='text' placeholder='Your name' name='username' value=username)
+      label(for='floatingName') Name
+    .form-floating
+      input#floatingID.form-control(type='number' placeholder='123' name='userid' value=userid)
+      label(for='floatingID') ID
+
+
+    p 
+        a(href='/') Home

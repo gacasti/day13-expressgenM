@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  //- var i = 0 ;
+  .container
+    h2.bg-info Products
+      .card-group
+        each prod in myproducts
+          .card
+            img.card-img-top(src=prod.imgpath alt='...')
+            .card-body
+              h5.card-title #{prod.name}
+              p.card-text
+                | Size: #{prod.size}
+                | Price: #{prod.price}
+              if !isdetails
+                a.btn.btn-primary(href='/products/details/'+ prod.prodid)  Details
+      if isdetails
+        a(href='/products') Back
+    p 
+        a(href='/') Home
